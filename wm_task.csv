@@ -1,0 +1,48 @@
+"state","number","u_cust_reference","u_contact","u_bus_name","u_street_address1","u_street_address2","u_city","u_state","u_zip_code","u_contact_phone","u_caller_phone2","u_contact_email","u_alt_contact","u_alt_contact_phone","u_alternate_contact_phone2","u_alt_contact_email","u_serial_number","u_srms_reported_style","short_description","description"
+"Pending Dispatch","WOT10227570","437341144","IT Support","ST VINCENT DE PAUL","2890 Chad Dr
+","","Eugene","Oregon","97408","5416008500","","support@svdp.us","","","","","5FZKTL3","LAT 3520","SR Online : VIDEO_DISPLAY:Other:","Replace LCD with ost"
+"Pending Dispatch","WOT10176441","437086197","Tennessa Ferrell","PACIFIC CASCADE FEDERAL CREDIT","1075 OAK ST
+","","EUGENE","Oregon","97401","541-284-5960","","tennessa@pacificcascade.org","","","","","DB5WFT3","OPTI 5000","No power","What the OST is to Do: Replace Motherboard"
+"Pending Dispatch","WOT10256891","437477156","Anthony Wurst","FLOODGATES HOLDINGS","2636 RIVERWALK LOOP
+","","EUGENE","Oregon","97401","2062268557","","tony@asw-legal.com","","","","","2FB69K3","XPS 15 9510","System crashes when left on overnight","Replace all parts and test"
+"Pending Dispatch","WOT10281749","437589929","Austin Mello","UNIV OF OREGON","955 E. 13th Ave
+Attn: Karl Owens
+","","EUGENE","Oregon","97403","5413463311","","lcbhelptech@uoregon.edu","","","","","JGHT593","LATITUDE 7410","random inputs when leaning on palmrest","Instructions: Replace palmrest with all cables included. Replace bottom door.;"
+"Pending Dispatch","WOT10291202","437629130","Chipper Goode","NORTH BEND PUBLIC SCHOOLS 13","1913 Meade St
+","","North Bend","Oregon","97459","541-297-6369","","cgoode@nbend.k12.or.us","","","","","4VJXTD3","OPTI 7090","Issue not listed","#Instructions to engineer# Replace fan"
+"Assigned","WOT10269146","437537333","Mark May","CU/MARK MAY","755 KINGS ROW
+","","CRESWELL","Oregon","97426","5415107901","","a20crazyduck02@hotmail.com","","","","","J8DFJQ3","","Social Case","Instruction to engineer 1. Please replace: fan assembly 2. Run ePSA. 3. Return unused/unreplaced parts"
+"Assigned","WOT10270095","437541218","Justice Schuhmann","CU/LUCAS SWISHER","570 Throne Dr.
+APT 169
+","","Eugene","Oregon","97402","5412946462","","jtschuhmann17@gmail.com","","","","","FF13DF3","INSP 15-3521","BATTERY NOT CHARING ONS - EMAIL","Instruction to Engineer Please replace part and wait for few minutes to check full functionality of the computer."
+"Assigned","WOT10283675","437596199","VICTOR MANZO","VICTOR MANZO","511 RANCH RD APT D2
+","","REEDSPORT","Oregon","97467","5413616142","","iwontcry4@outlook.com","","","","","JX5WXR3","DELL G16 7620","Backlight Keyboard Issue","Instructions: Replace palmrest with fully functional replacement.;"
+"Assigned","WOT9779542","434886191","EVAN IRONSDESIENA","EUGENE WATER & ELECTRIC BOARD","4200 ROOSEVELT BLVD","","EUGENE","Oregon","9740200","541 -68 5-7700","5419150608","evan.irons-desiena@eweb.org","5399989  NNU","","","","GKLVYX2","LAT 7424 RUGGD","Touchpad","Issue Summary / History# Touchpad hard to press "
+"Work Complete","WOT10253566","437459791","John Fink","CA, INC","1261 S St
+","","Springfield","Oregon","97477","5413377760","","john.fink@broadcom.com","","","","","10RJL13","LATITUDE 7400","Peripheral (Other)","#Instructions for Engineer# - Replace LCD HUD to fix camera detection issue."
+"Work Complete","WOT10233895","437370890","Mark Norris","FED/GENERAL DYNAMICS MISSION SYSTE","223 Arnold Ave
+173rd OPS Group / Lucas Galloway
+","","Klamath Falls","Oregon","97603","2105841060","","mark.norris.5.ctr@us.af.mil","","","","","H557JH2","ESFL1 R630","Possible NDC issue - R630 OS US FED PSMC4HR/KYHD H557JH2","Replace Network card. If issue not resolved replace the MB"
+"Work Complete","WOT10282868","437593514","Trevor Stanwood","CHAMPION TECHNOLOGIES RWS, LLC","845 McKinley St
+","","Eugene","Oregon","97402","541-484-3944","","trevors@ambientitsolutions.com","","","","","5V4M1G3","OPTI 5090","Power and Startup","Solution: Replace motherboard Alt Contact: Y Instructions: AMT=CHECK BEFORE REPLACING"
+"Work Complete","WOT10282199","437591116","Adam Burner","CA, INC","3152 Arrowhead St
+","","Eugene","Oregon","97404","1 (541) 7314211","","adam.burner@broadcom.com","","","","","7H4SP13","PRECISION 5540","Power (Battery, Power Supply, Other)","#Instructions for Engineer# 1/ R1 Replace DC-In cable"
+"Work Complete","WOT10231002","437352383","Amy Johnson.","JELD-WEN WINDOWS & DOORS","504 Jasmine Way
+","","Roseburg","Oregon","97471","541-331-3424","","ajohnson@jeldwen.com","Joe Fuller","5413634481","","joefuller@jeldwen.com","1X785Y2","LATITUDE 5501","Battery and Adapter","Instructions: Replace palmrest with correct one. Replace fan.;"
+"Work Complete","WOT10265418","437515024","Austin Mello","UNIV OF OREGON","955 E. 13th Ave
+Attn: Karl Owens
+","","EUGENE","Oregon","97403","5413463311","","lcbhelptech@uoregon.edu","","","","","JGHT593","LATITUDE 7410","random inputs when leaning on palmrest","What the OST is to Do: Replace Palmrest and keyboard"
+"Work Complete","WOT10254510","437463571","Brandon Smith","CADENCE COMMUNICATIONS, INC","2280 Marcola Rd
+","","Springfield","Oregon","97477","15417350171","","brandon@cadcom.us","","","","","8F27533","LATITUDE 5501","Charging issue","Instructions: Replace palmrest with correct replacement. Replace system board.;"
+"Work Complete","WOT10266893","437521228","VICTOR MANZO","VICTOR MANZO","511 RANCH RD APT D2
+","","REEDSPORT","Oregon","97467","5413616142","","iwontcry4@outlook.com","","","","","JX5WXR3","","Auto Case Created","Replace Palmrest assembly (Keyboard Included)"
+"Work Complete","WOT10221098","437304991","Charles Merritt","WESTERN PNEUMATICS","2400 River Rd
+Fl 2
+","","Eugene","Oregon","97404","5412465860","","charles.merritt@alphaitoregon.com","","","","","FJW53Q3","PRECISION 3460","System Hardware Performance","LINK_NUMBER:
+OS: None Other SEV: Medium RPT: 0.0Issue: Overheating issues. TS: Please replace the fan/heatsink"
+"Work Complete","WOT10239676","437387160","Alan Butner","WEYERHAEUSER CO","5000 Franklin Blvd
+","","Eugene","Oregon","97403","5034005167","","alan.butner@weyerhaeuser.com","Danielle Henderson","5419887515","","danielle.henderson@weyerhaeuser.com","CDQZK33","LATITUDE 5501","Keyboard issue","LINK_NUMBER:
+OS: None Other SEV: Medium RPT: 0.0ALT:DanielleHenderson5419887515nullM-F Issue - Keyboard keys not responding hard to press Resolution - replace keyboard and test"
+"Work Complete","WOT10273733","437553405","Austin Mello","UNIV OF OREGON","955 E. 13th Ave
+Attn: Karl Owens
+","","EUGENE","Oregon","97403","5413463311","","lcbhelptech@uoregon.edu","","","","","JGHT593","LATITUDE 7410","random inputs when leaning on palmrest","Instructions: Replace keyboard with working keyboard;"

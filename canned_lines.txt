@@ -1,0 +1,68 @@
+Greetings,
+Good morning {name},
+I am Jake Richter, a Field Service Technician for Dell, assigned to repair a computer for {name}.
+I am Jake Richter, a Field Service Technician for Dell, assigned to repair a computer for {name}. The alternate contact is listed as {altcontact}.
+Jake Richter here, a Field Service Technician for Dell, assigned to repair a computer for you. We worked together recently on another repair.
+Jake Richter here, a Field Service Technician for Dell, assigned to repair a computer for you. We've worked together before.
+The alternate contact is listed as {altname}.
+This is for an {model}, Service Tag {serial}.
+This is for an {model}, Service Tag {serial}. My notes indicate this is to replace the {parts}.
+I have a ticket to replace the {parts} on a {model}, service tag {serial}.
+It appears the parts for your next repair attempt are arriving today.
+In fact this appears to be for the same system - a {model}, service tag {serial}. I apologize that another repair is necessary.
+The new battery is being shipped to you and is arriving today. FedEx's website shows that the part is out on a vehicle now, for delivery "by end of day.
+The new battery was shipped to you. FedEx's website shows that the part has been delivered.
+The new part is being shipped to you and has an ETA of {part_eta} today.
+I would like to schedule my ETA for this service today between {start_time} am and {end_time} pm.
+I'm planning on coming by today between {start_time} am and {end_time} pm.
+I'm planning on coming by between {start_time} am and {end_time} pm.
+Hopefully the battery will be there when I arrive.
+I would also like to confirm your address and phone number as:
+{addr1}
+{addr2}
+{CSZ}
+{phone1} / {phone2}
+{altcontact}: {altphone1} / {altphone2}
+Unfortunately due to my scheduling I will not be able to service your computer today. I apologize for the inconvenience.
+Unfortunately I will not be able to service your computer today. Fedex's website indicates that your parts are delayed, most likely until tomorrow. I apologize for the inconvenience.
+Unfortunately due to the weather conditions along my route to you, I will not be able to service your computer today. I apologize for the inconvenience.
+I will prioritize your repair for tomorrow. Although I can't provide a time window at the moment, I wanted to get an idea from you when a good time for service would be, and also confirm your address and phone number as:
+Since it is different than before I'd also like to confirm the site address as:
+If there are additional instructions for access I'd appreciate having them.
+Please let me know if this is OK or if you need to make any changes.
+Will that be OK?
+Will that be ok?
+Will that be ok? Also if you could confirm your address from my initial email I'd appreciate it.
+You can reply to this email or call me at 503-267-5776, otherwise I will follow up by phone around 9:00 this morning.
+Once again I apologize for the delay. I will contact you again tomorrow to schedule your repair.
+I will prioritize your repair for tomorrow, and contact you in the morning on this thread to schedule your repair.
+Once again I apologize for the delay. I will contact you again on Monday to schedule your repair.
+I will prioritize your repair for Monday, and contact you in the morning on this thread to schedule your repair.
+Please note that I'm getting an indication that your parts may be delayed at FedEx, most likely until tomorrow. I'll know more when I get there - around 10-11 this morning - but I want to set your expectation that service may not happen today. If the parts do not arrive today I'll let you know, otherwise I'll show up as scheduled.
+Please note that Dell requires contact within 5 business days of part arrival. Since I have not heard from you this week, I will have to cancel your ticket if I don't receive a response by Monday morning. You will need to resubmit your request to Dell to create a new dispatch. I apologize for the inconvenience.
+Thanks,
+Jake
+Jake Richter
+____________________\n
+Order:\t{CallNumber} - {DispatchNumber}\t
+Name:\t{Name}
+Comp:\t{Comp}
+Addr1:\t{Addr1}
+Addr2:\t{Addr2}
+Alt:\t{AltName}
+AltPh:\t{AltPhone}
+AltPh2:\t{AltPhone}
+CSZ:\t{CSZ}
+{Model}
+{Serial}
+{Issue}
+Part1:\t{Part(1).Waybill}:\t{Part(1).Description}
+Part2:\t{Part(2).Waybill}:\t{Part(2).Description}
+Part3:\t{Part(3).Waybill}:\t{Part(3).Description}
+Part4:\t{Part(4).Waybill}:\t{Part(4).Description}
+Part5:\t{Part(5).Waybill}:\t{Part(5).Description}
+Part6:\t{Part(6).Waybill}:\t{Part(6).Description}
+Part7:\t{Part(7).Waybill}:\t{Part(7).Description}
+Part8:\t{Part(8).Waybill}:\t{Part(8).Description}
+Part9:\t{Part(9).Waybill}:\t{Part(9).Description}
+____________________

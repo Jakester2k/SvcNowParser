@@ -1,0 +1,166 @@
+SvcNowParser:
+
+This is a description of a program:
+
+	The files 'wm_task.csv' and 'alm_transfer_order_line.csv' are moved from %downloads% to the local directory, overwriting existing files. If the files aren't in %downloads%, verify they exist in the local directory or print an error.
+
+	'wm_task.csv' is opened, and the lines are extracted to a dictionary named Call, which is added to a list named AllCalls. The field names are renamed to the following keys in Call:
+		state = Status
+		number = CallNumber
+		u_cust_reference = DispatchNumber
+		u_contact = Name
+		u_bus_name = Comp
+		u_street_address1 = Addr1
+		u_street_address2 = Addr2
+		u_city = City
+		u_state = State
+		u_zip_code = Zip
+		u_contact_phone = Phone
+		u_caller_phone2 = Phone2
+		u_contact_email = Email
+		u_alt_contact = AltName
+		u_alt_contact_phone = AltPhone
+		u_alternate_contact_phone2 = AltPhone2
+		u_alt_contact_email = AltEmail
+		u_serial_number = Serial
+		u_srms_reported_style = Model
+		short_description = Issue
+		description = Notes
+
+	'alm_transfer_order_line.csv' is opened, and the lines are extracted to a dictionary named Part, which is added to a list named AllParts. The field names are renamed to the following keys in Part:
+		u_service_task_order = CallNumber
+		tracking_number = Waybill
+		u_part_description = Description
+		u_shipto_location = Depot
+
+	For every Part in AllParts:
+		Using the dictionary below, if Depot contains the key, change it to the value:
+			"SPRINGFIELD" : "700+International+Way,+Springfield,+OR+97401"
+			"MEDFORD" : "3600+Terminal+Spur+Road,+Medford,+OR+97501"
+
+	For every Call in AllCalls:
+		in every field replace "\n" with " "
+		
+		Clean up the number in the four phone number fields
+
+		A field named CallParts is added to the Call, which contains a list of all Part dictionaries from AllParts where Calls[CallNumber] == Parts[CallNumber].
+		A field named CSZ is added to the Call, which contains the City, State and Zip fields in the format: City+", "+State.upper()[:2]+" "+Zip[:5].
+
+	'canned_lines.txt' is opened, and the lines extracted to a list, CannedLinesText.
+
+Show OOP Python code for this and for a main() function that calls it and prints out the Calls information for all calls.
+
+GUI:
+
+	CallsListFrame on the left. It contains:
+		A listbox, 'CallsList'
+		4 or more checkboxes, below CallsList, distributed evenly across the width of CallsList:
+			'Sort', a checkbox which toggles sorting the listbox by number
+			A checkbox for each unique value in Status, named '{value}'
+
+	FieldsFrame in the middle. It contains:
+		Parsed Field textentry controls, which display information but cannot be edited:
+		Name
+		Addr1
+		Addr2
+		CSZ
+		Phone	Phone1	Email
+		AltName
+		AltPhone	AltPhone1	AltEmail
+		Model	Serial
+
+	SelectionFrame below FieldsFrame. It contains Selected Field dropdown controls, which display lists created at designtime:
+			Repair Type:
+				Computer, Server
+			Delay Type:
+				None, Delay, Part Delay, Long Delay
+			Start Time:
+				1,2,3,4,5,6,7,8,9,10,11,12
+			End Time:
+				1,2,3,4,5,6,7,8,9,10,11,12
+			Parts:
+				Motherboard
+				Keyboard
+				LCD Panel
+				DC-in Cable
+
+	PreviewFrame on the right. It contains:
+		Preview on the right, an output textbox.
+		Email_Calls, Fedex, Map, Gen_Email buttons below Preview. Gen_Email is disabled.
+
+	CannedLinesFrame on the left. It is the same size and location as CallsListFrame. It contains:
+		CannedLines, a CheckedListBox.
+		4 Preset buttons below CannedLines: "1st Email\nPreset", "2nd Email\nPreset", "3rd Email\nPreset", "4th Email\nPreset".
+
+
+GUI Startup:
+
+	CallsListFrame, ParsedFieldFrame and PreviewFrame are visible. CannedLinesFrame and SelectedFieldsFrame are not visible.
+
+	CallsList displays the list of CallNumbers. Parsed Fields, Preview and Selected fields are blank or defaulted. CallsList_label, a label above CallsList, displays "{CountOfAllCalls} Calls". 
+
+	CannedLines is populated with items from CannedLinesText.
+
+	A list called Presets is defined, which contains the 4 presets used by the Preset buttons, as well as the preset used by CallsList. Presets(0) is set to the last 22 items of CannedLinesText. The other will be set at designtime.
+
+GUI Behavior:
+
+	Selecting one CallNumber in CallsList populates the Parsed Fields and displays the Call in Preview using Presets(0). CallsList_label displays "Call {IndexOfSelectedCall} of {CountOfAllCalls} calls", where IndexOfSelectedCall is the position clicked in CallsList, not the call's position in any other list (including CallsList if sorted differently).
+
+	Selecting more than one Call number in CallsList blanks the Parsed Fields, and displays each Call in Preview, using Presets(0). CallsList_label displays "Selected {CountOfSelectedCalls} of {CountOfAllCalls} calls"
+
+	Preview and Parsed Fields update whenever CallsList is clicked, possibly on MouseButtonReleased.
+
+	Preview allows selecting text, including all text, and copying it to the clipboard. It has a rightclick menu:
+		"Select Call" which selects all text between the two "_"*20 lines closest to the mouseclick
+		"Select All" which selects all text
+		"Copy" which copies the selection to the clipboard
+		Keyboard shortcuts: Ctrl-S, Ctrl-A, Ctrl-C
+
+	Maps button, with text "Google Map", creates a GoogleMaps URL that includes my home address, the first Depot address, and addresses from selected Calls. If a call has a different Depot, add its address before the call's address. It then launches a Chrome tab to the URL
+
+	FedEx button, with text "FedEx", creates a FedEx.com tracking URL that includes Waybills from all calls in CallsList. It then launches a Chrome tab to the URL
+
+	Email_Calls, with text "Email", is only enabled when one call is selected in CallsList. It toggles the display between:
+		CallsListFrame is visible
+		CannedLinesFrame is invisible
+		SelectedFieldsFrame is invisible. 
+		Preview displays the selected Call(s) with Preset(0).
+		Parsed fields are non-editable.
+		Email_calls button text is 'Email'
+		Map and FedEx buttons are ensabled
+		Gen_Email is disabled, 
+	and:
+		CallsListFrame is invisible
+		CannedLinesFrame is visible
+		SelectedFieldsFrame is visible. 
+		Parsed fields are editable.
+		Preview displays the selected Call with Preset(1).
+		Email_calls button text is 'Calls'
+		Map and FedEx buttons are disabled
+		Gen_Email becomes enabled.
+
+	In CannedLines, checking a checkbox in an item causes the item's text to appear in Preview. Unchecking removes the line from Preview. The lines appear in Preview in the order they are in CannedLines. If the text contains {fields}, values from Parsed Fields and Selected Fields are substituted using the matching FieldName in Calls. If all of an item's fields are empty, the line will not appear in Preview even if its checkbox is checked.
+
+	Preview updates when any control is selected.
+
+	Preset buttons select different sets of CannedLines based on a designtime list called Presets, also causing Preview to update.
+
+	Preset 0 is used to display calls in Preview when the Calls_Email button is set to Calls:
+
+	Gen_email button creates an email from the contents of Preview using "mailto:" OS facility. Subject is created from Selected Fields content, and email is addressed with Email field and cc'd with AltEmail field.
+
+
+
+
+
+########################
+
+		For field in [Phone, Phone2, AltPhone and AltPhone2]
+			cleaned_number = re.sub(r"[^\d]", "", call[field])
+			if cleaned_number[1] == "1": cleaned_number = cleaned_number[2:]
+			if len(cleaned_number)>10:
+				field = cleaned_number[:3]+"-"+cleaned_number[3:6]+"-"+cleaned_number[6:10]+", ext. "+field[10:]
+			else:
+				field = cleaned_number[:3]+"-"+cleaned_number[3:6]+"-"+cleaned_number[6:10]
+
